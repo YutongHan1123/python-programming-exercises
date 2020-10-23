@@ -12,13 +12,6 @@ I googled the explanation of print, and it says:
     print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
 
 Parameter:
-Name 	    Description 	                                                              Required /Optional
-objects 	Object to the printed. * indicates that there may be more than one object 	Optional
-sep 	    Objects are separated by sep. Default value: ' ' 	                          Optional
-end 	    Specify what to print at the end. Default is line feed ('\n').              Optional
-file 	    An object with write(string) method. Default: sys.stdout, which prints objects on the screen. 	Optional
-flush 	The stream is forcibly flushed If flush is True. Default value: False 	Optional
-
 | Name   | Description                                                                                   | Required /Optional |
 | ------ |:---------------------------------------------------------------------------------------------:| ------------------:|
 | objects| Object to the printed. * indicates that there may be more than one object                     | Optional           |
@@ -26,3 +19,13 @@ flush 	The stream is forcibly flushed If flush is True. Default value: False 	Op
 | end    | Specify what to print at the end. Default is line feed ('\n').                                | Optional           |
 | file   | An object with write(string) method. Default: sys.stdout, which prints objects on the screen. | Optional           |
 | flush  | The stream is forcibly flushed If flush is True. Default value: False                         | Optional           |
+
+Here is an example.
+
+>>> fp = open("file.txt","w")
+>>> print("Append me to the file", file=fp)
+>>> fp.close()
+
+
+#### [DAY1-2](https://github.com/YutongHan1123/python-programming-exercises/blob/main/day1-2.py)
+I need to write a program which can compute the factorial of a given numbers.
