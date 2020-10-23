@@ -76,7 +76,7 @@ Output: [(1, 'apple'), (2, 'banana'), (3, 'grapes'), (4, 'pear')]
 
 2. Using dictionary comprehension
 ```python
-    n = int(input())
-    ans={i : i*i for i in range(1,n+1)}
-    print(ans)
+n = int(input())
+ans={i : i*i for i in range(1,n+1)}
+print(ans)
 ```
