@@ -22,9 +22,9 @@ Parameter:
 
 Here is an example.
 
->>> fp = open("file.txt","w")
->>> print("Append me to the file", file=fp)
->>> fp.close()
+    fp = open("file.txt","w")
+    print("Append me to the file", file=fp)
+    fp.close()
 
 
 #### [DAY1-2](https://github.com/YutongHan1123/python-programming-exercises/blob/main/day1-2.py)
