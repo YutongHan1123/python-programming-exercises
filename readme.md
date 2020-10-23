@@ -46,25 +46,37 @@ I need to generate a dictionary that contains (i, i x i) such that is an integra
 
 And I learned two new solutions from website:
 1. Solution by: yurbika. Corrected by: developer-47
+```python
+num = int(input("Number: "))
+print(dict(enumerate([i*i for i in range(1, num+1)], 1))) 
+```
 
-    num = int(input("Number: "))
-    print(dict(enumerate([i*i for i in range(1, num+1)], 1))) 
-
-*Numerate* is a built-in function of Python. Its usefulness can not be summarized in a single line. Yet most of the newcomers and even some advanced programmers are unaware of it. It allows us to loop over something and have an automatic counter. Here is an example:
+**Numerate** is a built-in function of Python. Its usefulness can not be summarized in a single line. Yet most of the newcomers and even some advanced programmers are unaware of it. It allows us to loop over something and have an automatic counter. Here is an example:
 
     my_list = ['apple', 'banana', 'grapes', 'pear']
     for counter, value in enumerate(my_list):
     print counter, value
 
-# Output:
-# 0 apple
-# 1 banana
-# 2 grapes
-# 3 pear
+ Output:
+ 0 apple
+ 1 banana
+ 2 grapes
+ 3 pear
+
+An example of where the optional argument of enumerate comes in handy is creating tuples containing the index and list item using a list. Here is an example:
+```python
+my_list = ['apple', 'banana', 'grapes', 'pear']
+counter_list = list(enumerate(my_list, 1))
+print(counter_list)
+```
+
+Output: [(1, 'apple'), (2, 'banana'), (3, 'grapes'), (4, 'pear')]
+
 
 
 2. Using dictionary comprehension
-
+```python
     n = int(input())
     ans={i : i*i for i in range(1,n+1)}
     print(ans)
+```
