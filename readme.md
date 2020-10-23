@@ -31,4 +31,40 @@ Here is an example.
 
 
 #### [DAY1-2](https://github.com/YutongHan1123/python-programming-exercises/blob/main/day1-2.py)
-I need to write a program which can compute the factorial of a given numbers.
+I need to write a program which can compute the factorial of a given numbers. I used for loop to solve it. And when I go through online solutions, the Lambda Function solution caught my attention. 
+
+Using Lambda Function Solution by:  harshraj22
+
+    n = int(input())
+    def shortFact(x): return 1 if x <= 1 else x*shortFact(x-1)
+    
+I like the way shorFact(x) ... shortFact(x-1), it like matryoshka doll, and very short, clean.
+
+#### [DAY1-3](https://github.com/YutongHan1123/python-programming-exercises/blob/main/day1-3.py)
+I need to generate a dictionary that contains (i, i x i) such that is an integral number between 1 and n. I still used for loop to solve it. And don't forget:
+> when using for i in range(a, b+1), the result will be between a and b (both included).
+
+And I learned two new solutions from website:
+1. Solution by: yurbika. Corrected by: developer-47
+
+    num = int(input("Number: "))
+    print(dict(enumerate([i*i for i in range(1, num+1)], 1))) 
+
+*Numerate* is a built-in function of Python. Its usefulness can not be summarized in a single line. Yet most of the newcomers and even some advanced programmers are unaware of it. It allows us to loop over something and have an automatic counter. Here is an example:
+
+    my_list = ['apple', 'banana', 'grapes', 'pear']
+    for counter, value in enumerate(my_list):
+    print counter, value
+
+# Output:
+# 0 apple
+# 1 banana
+# 2 grapes
+# 3 pear
+
+
+2. Using dictionary comprehension
+
+    n = int(input())
+    ans={i : i*i for i in range(1,n+1)}
+    print(ans)
